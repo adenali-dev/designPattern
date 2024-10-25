@@ -4,6 +4,7 @@ public abstract class AbstractFlipperState implements FlipperState {
     protected final Flipper flipper;
 
     public AbstractFlipperState(Flipper flipper) {
+
         this.flipper = flipper;
     }
 

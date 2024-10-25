@@ -1,8 +1,11 @@
 package mediator;
 
+import elements.PinballElement;
+import elements.Ramp;
+import elements.Target;
+
 import java.util.ArrayList;
 import java.util.List;
-import elements.*;
 
 public class PinballMediator implements Mediator {
     private List<Target> targets = new ArrayList<>();
@@ -26,9 +29,10 @@ public class PinballMediator implements Mediator {
                     break;
                 }
             }
-            if (allTargetsHit) {
+            // Nur öffnen, wenn die Rampe noch geschlossen ist und alle Targets getroffen wurden
+            if (allTargetsHit && !ramp.isOpen()) {
+                System.out.println("All targets hit.");
                 ramp.open();
-                System.out.println("All targets hit. Ramp is now open!");
             }
         }
     }

@@ -2,6 +2,8 @@ package visitor;
 
 import elements.*;
 
+import java.util.List;
+
 public interface Visitor {
     void visit(Target target);
     void visit(Bumper bumper);

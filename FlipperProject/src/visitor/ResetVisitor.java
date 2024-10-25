@@ -3,9 +3,10 @@ package visitor;
 import elements.*;
 
 public class ResetVisitor implements Visitor {
+
     @Override
     public void visit(Target target) {
-        target.reset();
+        target.reset(); // Setzt jedes einzelne Target zurück
     }
 
     @Override
@@ -15,7 +16,7 @@ public class ResetVisitor implements Visitor {
 
     @Override
     public void visit(Ramp ramp) {
-        ramp.close();
+        ramp.close(); // Schließt die Rampe wieder
     }
 
     @Override

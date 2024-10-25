@@ -2,6 +2,7 @@ package state;
 
 public class EndState extends AbstractFlipperState {
     public EndState(Flipper flipper) {
+
         super(flipper);
     }
 
